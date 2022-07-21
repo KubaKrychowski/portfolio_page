@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'portfolio';
+
+  isCompanyDescriptionVisible: boolean = false;
+
+  toggleCompanyDescription(): void {
+    this.isCompanyDescriptionVisible = !this.isCompanyDescriptionVisible
+  }
 }

@@ -139,16 +139,124 @@
   <article class="page-section">
     <h1 class="section-header">My work experience</h1>
 
-    <div class="company-description">
+    <div
+      (click)="toggleCompanyDescription()"
+      class="company-description company-description-ifs-and-whiles"
+    >
       <div class="row">
-        <img class="company-logo" src="../assets/its&whiles-logo.png">
+        <img class="company-logo" src="../assets/its&whiles-logo.png" />
 
         <div class="col">
           <h3 class="company-name">Ifs&Whiles sp.z o.o</h3>
           <h5 clas="my-experience-time">9 months: 10.2021 - 06.2022</h5>
         </div>
+
+        <span class="ml-a material-icons"> expand_more </span>
       </div>
 
+      <div class="expanded-description" *ngIf="isCompanyDescriptionVisible">
+        <h5>My daily duties:</h5>
+        <ul>
+          <li>
+            I worked on a front-end application for manual testers training. The
+            application is a simplified version of "Trello" with an additional
+            option to turn some pre-programmed "bugs" on and off so that
+            trainees could find them and see what the process of testing the
+            software looks like. <b>Gallery button</b>
+          </li>
+        </ul>
+
+        <h5>Technologies I used:</h5>
+
+        <ul>
+          <li>Angular</li>
+          <li>Html</li>
+          <li>bootstrap</li>
+          <li>SASS</li>
+          <li>ngx-bootstrap</li>
+          <li>TypeScript</li>
+        </ul>
+
+        <h5>Biggest problems i had to resolve:</h5>
+
+        <p>My Achilles' heel was creating drag-drop system for tasks between lists. After 2 days of fight with that, i changed my mindset a bit and tried
+          to use ngx-drap-drop library which was success.
+        </p>
+      </div>
+    </div>
+
+    <div
+      (click)="toggleCompanyDescription()"
+      class="company-description company-description-mpl"
+    >
+      <div class="row">
+        <img class="company-logo-mpl" src="../assets/mpl-logo.png" />
+
+        <div class="col">
+          <h3 class="company-name">Mieszkanie.pl sp.z o.o</h3>
+          <h5 clas="my-experience-time">3 months: 05.2021 - 08.2022</h5>
+        </div>
+      </div>
+
+      <span class="ml-a material-icons"> expand_more </span>
+
+      <div class="expanded-description" *ngIf="isCompanyDescriptionVisible">
+        <h5>My daily duties:</h5>
+        <ul>
+          <li>
+            front-end development using Angular, HTML and SCSS for mieszkanie.pl and hrenext.pl applications
+          </li>
+
+          <li>
+            Cooperation with the team on working on front-end solutions
+          </li>
+
+          <li>
+            Creating materials based on delivered adobe xd projects for the marketing department like:
+            <ul>
+              <li>mailings</li>
+              <li>banners in HTML</li>
+            </ul>
+          </li>
+
+          <li>Deployment solutions under the SEO and PWA</li>
+          <li>Deployment web pages</li>
+          <li>Support in mieszkanie.pl development</li>
+          <li>Creating web pages in WordPress based on adobe xd projects</li>
+        </ul>
+
+        <h5>Technologies I used:</h5>
+
+        <ul>
+          <li>Angular</li>
+          <li>Html</li>
+          <li>bootstrap</li>
+          <li>SCSS</li>
+          <li>TypeScript</li>
+          <li>RxJS</li>
+          <li>Angular Materials</li>
+          <li>JavaScript</li>
+        </ul>
+
+        <h5>Biggest problems i had to resolve:</h5>
+          <ul>
+            <li>Create a gallery for offers in marketplace listing</li>
+          </ul>
+
+          <p>SwiperJS is really nice looking library to do that. Unfortunetly it doesn't work well in angular projects. Most of features are bugged or disabled.
+            If I say that i had to "rewrite" features like: adding gestures serives or thumbnails it will be good affirmative.
+          </p>
+
+          <ul>
+            <li>Drag events to put them in the next/previous week</li>
+          </ul>
+
+          <p>At the beggining we planned to creat drag system similar to that which is used in every android mobile phone. When user hold event in the end of last day in week view, calendar should
+            detect that event and swipe to next/previous week. Everything worked good till swipe moment cause then, mwl-calendar (its angular build in library) destroy instance of week which from event
+            have been taken and creates new. Of course event was dissapearing then. Solution was easier than we would expect. All I had to do was create container to hold all events which I want to replace
+            and put them back.
+          </p>
+      </div>
     </div>
   </article>
 </section>
