@@ -3,7 +3,10 @@
 
   <header class="app-header">
     <div class="text">
-      <h1 class="name">Kuba Krychowski</h1>
+      <div class="row">
+        <h1 class="name">Kuba Krychowski</h1>
+        <h3>Junior Front-end Developer</h3>
+      </div>
 
       <p class="description">
         Programming has been my hobby for nine years already. Starting from
@@ -240,7 +243,7 @@
 
         <h5>Biggest problems i had to resolve:</h5>
           <ul>
-            <li>Create a gallery for offers in marketplace listing</li>
+            <li><h4>Create a gallery for offers in marketplace listing</h4></li>
           </ul>
 
           <p>SwiperJS is really nice looking library to do that. Unfortunetly it doesn't work well in angular projects. Most of features are bugged or disabled.
@@ -248,15 +251,54 @@
           </p>
 
           <ul>
-            <li>Drag events to put them in the next/previous week</li>
+            <li><h4>Drag events to put them in the next/previous week</h4></li>
           </ul>
 
-          <p>At the beggining we planned to creat drag system similar to that which is used in every android mobile phone. When user hold event in the end of last day in week view, calendar should
-            detect that event and swipe to next/previous week. Everything worked good till swipe moment cause then, mwl-calendar (its angular build in library) destroy instance of week which from event
+          <p>At the beggining we planned to create drag system similar to implemented in every android mobile phone. When user hold event in the end of last day in week view, calendar should
+            detect that event, and swipe to the next/previous week. Everything worked good till swipe moment cause then, mwl-calendar (its angular build in library) destroy instance of week which from event
             have been taken and creates new. Of course event was dissapearing then. Solution was easier than we would expect. All I had to do was create container to hold all events which I want to replace
             and put them back.
           </p>
       </div>
     </div>
+  </article>
+
+  <article class="page-section">
+    <h1 class="section-header">My carrer goals</h1>
+    <div class="row">
+      <div class="col milestone">
+        <p style="text-align: center;">Learn basics of JavaScript,CSS,HTML</p>
+        <div class="circle"></div>
+      </div>
+
+      <div class="col milestone">
+        <p style="text-align: center;">Learn Angular Framework and any of preprocessors styles language (SASS,SCSS)</p>
+        <div class="circle"></div>
+      </div>
+
+      <div class="col milestone">
+        <p style="text-align: center;">Get first job as front-end developer</p>
+        <div class="circle"></div>
+      </div>
+
+      <div class="col milestone">
+        <p style="text-align: center;">Gain 1 year of commercial experience</p>
+        <div class="circle"></div>
+      </div>
+
+      <div class="col milestone">
+        <p style="text-align: center;">Start learning .NET Framework</p>
+        <div class="circle circle-empty"></div>
+      </div>
+
+      <div class="col milestone">
+        <p style="text-align: center;">Get first job as full-stack developer</p>
+        <div class="circle circle-empty"></div>
+      </div>
+    </div>
+
+    <mat-progress-bar mode="determinate" value="60"></mat-progress-bar>
+
+
   </article>
 </section>
