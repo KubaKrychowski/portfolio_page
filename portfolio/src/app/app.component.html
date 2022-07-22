@@ -182,8 +182,10 @@
 
         <h5>Biggest problems i had to resolve:</h5>
 
-        <p>My Achilles' heel was creating drag-drop system for tasks between lists. After 2 days of fight with that, i changed my mindset a bit and tried
-          to use ngx-drap-drop library which was success.
+        <p>
+          My Achilles' heel was creating drag-drop system for tasks between
+          lists. After 2 days of fight with that, i changed my mindset a bit and
+          tried to use ngx-drap-drop library which was success.
         </p>
       </div>
     </div>
@@ -207,15 +209,15 @@
         <h5>My daily duties:</h5>
         <ul>
           <li>
-            front-end development using Angular, HTML and SCSS for mieszkanie.pl and hrenext.pl applications
+            front-end development using Angular, HTML and SCSS for mieszkanie.pl
+            and hrenext.pl applications
           </li>
 
-          <li>
-            Cooperation with the team on working on front-end solutions
-          </li>
+          <li>Cooperation with the team on working on front-end solutions</li>
 
           <li>
-            Creating materials based on delivered adobe xd projects for the marketing department like:
+            Creating materials based on delivered adobe xd projects for the
+            marketing department like:
             <ul>
               <li>mailings</li>
               <li>banners in HTML</li>
@@ -242,23 +244,32 @@
         </ul>
 
         <h5>Biggest problems i had to resolve:</h5>
-          <ul>
-            <li><h4>Create a gallery for offers in marketplace listing</h4></li>
-          </ul>
+        <ul>
+          <li><h4>Create a gallery for offers in marketplace listing</h4></li>
+        </ul>
 
-          <p>SwiperJS is really nice looking library to do that. Unfortunetly it doesn't work well in angular projects. Most of features are bugged or disabled.
-            If I say that i had to "rewrite" features like: adding gestures serives or thumbnails it will be good affirmative.
-          </p>
+        <p>
+          SwiperJS is really nice looking library to do that. Unfortunetly it
+          doesn't work well in angular projects. Most of features are bugged or
+          disabled. If I say that i had to "rewrite" features like: adding
+          gestures serives or thumbnails it will be good affirmative.
+        </p>
 
-          <ul>
-            <li><h4>Drag events to put them in the next/previous week</h4></li>
-          </ul>
+        <ul>
+          <li><h4>Drag events to put them in the next/previous week</h4></li>
+        </ul>
 
-          <p>At the beggining we planned to create drag system similar to implemented in every android mobile phone. When user hold event in the end of last day in week view, calendar should
-            detect that event, and swipe to the next/previous week. Everything worked good till swipe moment cause then, mwl-calendar (its angular build in library) destroy instance of week which from event
-            have been taken and creates new. Of course event was dissapearing then. Solution was easier than we would expect. All I had to do was create container to hold all events which I want to replace
-            and put them back.
-          </p>
+        <p>
+          At the beggining we planned to create drag system similar to
+          implemented in every android mobile phone. When user hold event in the
+          end of last day in week view, calendar should detect that event, and
+          swipe to the next/previous week. Everything worked good till swipe
+          moment cause then, mwl-calendar (its angular build in library) destroy
+          instance of week which from event have been taken and creates new. Of
+          course event was dissapearing then. Solution was easier than we would
+          expect. All I had to do was create container to hold all events which
+          I want to replace and put them back.
+        </p>
       </div>
     </div>
   </article>
@@ -267,38 +278,89 @@
     <h1 class="section-header">My carrer goals</h1>
     <div class="row">
       <div class="col milestone">
-        <p style="text-align: center;">Learn basics of JavaScript,CSS,HTML</p>
+        <p style="text-align: center">Learn basics of JavaScript,CSS,HTML</p>
         <div class="circle"></div>
       </div>
 
       <div class="col milestone">
-        <p style="text-align: center;">Learn Angular Framework and any of preprocessors styles language (SASS,SCSS)</p>
+        <p style="text-align: center">
+          Learn Angular Framework and any of preprocessors styles language
+          (SASS,SCSS)
+        </p>
         <div class="circle"></div>
       </div>
 
       <div class="col milestone">
-        <p style="text-align: center;">Get first job as front-end developer</p>
+        <p style="text-align: center">Get first job as front-end developer</p>
         <div class="circle"></div>
       </div>
 
       <div class="col milestone">
-        <p style="text-align: center;">Gain 1 year of commercial experience</p>
+        <p style="text-align: center">Gain 1 year of commercial experience</p>
         <div class="circle"></div>
       </div>
 
       <div class="col milestone">
-        <p style="text-align: center;">Start learning .NET Framework</p>
+        <p style="text-align: center">Start learning .NET Framework</p>
         <div class="circle circle-empty"></div>
       </div>
 
       <div class="col milestone">
-        <p style="text-align: center;">Get first job as full-stack developer</p>
+        <p style="text-align: center">Get first job as full-stack developer</p>
         <div class="circle circle-empty"></div>
       </div>
     </div>
 
     <mat-progress-bar mode="determinate" value="60"></mat-progress-bar>
+  </article>
 
+  <article class="page-section">
+    <h1 class="section-header">My projects:</h1>
+    <div class="row">
+      <div class="project-card">
+        <img class="project-photo" src="../assets/marketing-simulator.png" />
+        <div class="row">
+          <h3 class="project-name"><b>Marketing Simulator</b></h3>
 
+          <div class="ml-a status">In build</div>
+        </div>
+        <hr />
+        <p class="project-short-description">
+          It's a web application aimed at demonstration of free-market rules.
+          Every user starts with a small company whose goal is to climb global
+          rankings.
+        </p>
+
+        <h5>Stack:</h5>
+
+        <div class="stack ml-a mt-a row">
+          <img class="tech-thumb" matTooltip="Angular Framework" src="../assets/angular-logo.png">
+          <img class="tech-thumb" matTooltip="Angular Materials" src="../assets/angular-materials-logo.png">
+          <img class="tech-thumb" matTooltip="ASP .NET" src="../assets/dot-net-logo.png">
+          <img class="tech-thumb" matTooltip="google cloud platform: google maps and geolocalization" src="../assets/gcs-logo.png">
+        </div>
+      </div>
+
+      <div class="project-card">
+        <img class="project-photo" src="../assets/company-management.png" />
+        <div class="row">
+          <h3 class="project-name"><b>Company Management</b></h3>
+
+          <div class="ml-a status status-canceled">Canceled</div>
+        </div>
+        <hr />
+        <p class="project-short-description">
+          Web application letting small companies owners better manage
+        </p>
+
+        <h5>Stack:</h5>
+
+        <div class="stack ml-a mt-a row">
+          <img class="tech-thumb" src="../assets/angular-logo.png">
+          <img class="tech-thumb" src="../assets/bootstrap-logo.png">
+          <img class="tech-thumb" src="../assets/google-firebase-logo.png">
+        </div>
+      </div>
+    </div>
   </article>
 </section>
