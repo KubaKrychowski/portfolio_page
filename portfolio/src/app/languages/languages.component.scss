@@ -1,0 +1,31 @@
+.cards-container {
+  margin-top: 2em;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.card {
+  display: flex;
+  width: 80%;
+  height: 8em;
+  margin-top: 3em;
+  margin-left: 5%;
+  padding: 1em;
+  background-color: rgb(30, 26, 46);
+  border-radius: 25px;
+  -webkit-box-shadow: 1px 1px 20px -5px rgba(255, 255, 255, 1);
+  -moz-box-shadow: 1px 1px 20px -5px rgba(255, 255, 255, 1);
+  box-shadow: 1px 1px 20px -5px rgba(255, 255, 255, 1);
+
+  .card-thumb {
+    width: 25%;
+    height: auto;
+  }
+
+  // &::nth-child(n+3){
+  //   margin-top: 2%;
+  // }
+}
+
+

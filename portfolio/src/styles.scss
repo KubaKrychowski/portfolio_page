@@ -17,5 +17,41 @@ body {
   margin-top: auto;
 }
 
+.relative{
+  position: relative;
+}
+
+.bottom-0{
+  position: absolute;
+  bottom: 0;
+}
+
+.col-gap-1{
+  column-gap: 0.5em !important;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  column-gap: 2%;
+}
+
+.align-items-start{
+  align-items: flex-start !important;
+}
+
+.col {
+  display: flex;
+  flex-direction: column;
+}
+
+h3 {
+  margin: 0;
+}
+
+h5 {
+  margin: 0;
+}
 html, body { height: 100%; }
 

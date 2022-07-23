@@ -1,0 +1,60 @@
+<div
+ (click)="toggleExtendedDescription(companyDescription)"
+ *ngFor="let companyDescription of companiesDescription"
+ class="company-description {{companyDescription.className}}" >
+  <div class="row">
+    <img class="company-logo" src="../assets/{{companyDescription.thumbSrc}}" />
+
+    <div class="col basic-informations">
+      <h3 class="company-name">
+        {{companyDescription.companyName}}
+      </h3>
+
+      <h5 clas="my-experience-time">
+        {{companyDescription.time}}
+      </h5>
+    </div>
+  </div>
+
+  <div *ngIf="companyDescription.isExtended" class="expanded-description">
+    <h5>
+      My daily duties:
+    </h5>
+
+    <ul>
+      <li *ngFor="let dailyDuty of companyDescription.dailyDuties">
+        {{dailyDuty.title}}
+
+        <ul *ngIf="dailyDuty.description">
+          <li *ngFor="let dailyDutyDescription of dailyDuty.description">
+            {{dailyDutyDescription}}
+          </li>
+        </ul>
+      </li>
+    </ul>
+
+    <h5>
+      Technologies I used:
+    </h5>
+
+    <ul>
+      <li *ngFor="let technology of companyDescription.technologies">
+        {{technology}}
+      </li>
+    </ul>
+
+    <h5>
+      Biggest problems i had to resolve:
+    </h5>
+
+    <ul>
+      <li *ngFor="let problem of companyDescription.biggestProblems">
+        {{problem.title}}
+
+        <p *ngIf="problem.description">
+          {{problem.description}}
+        </p>
+      </li>
+    </ul>
+  </div>
+</div>
