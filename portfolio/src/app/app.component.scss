@@ -98,7 +98,6 @@
     -webkit-box-shadow: 2px 25px 24px 0px rgba(186, 133, 237, 1);
     -moz-box-shadow: 2px 25px 24px 0px rgba(186, 133, 237, 1);
     box-shadow: 2px 25px 24px 0px rgba(186, 133, 237, 1);
-    cursor: pointer;
   }
 
   .project-card-content {
@@ -154,4 +153,13 @@
       }
     }
   }
+}
+
+.github-link{
+  display: block;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 10%;
+  height: auto;
 }
