@@ -1,12 +1,15 @@
 import { Component, OnInit } from '@angular/core';
+import { DropDownAnimation } from '../shared/animations/dropdown.animation';
 import { CompanyCardModel } from '../shared/models/company-card.model';
 
 @Component({
   selector: 'app-work-experience',
   templateUrl: './work-experience.component.html',
   styleUrls: ['./work-experience.component.scss'],
+  animations: [DropDownAnimation]
 })
 export class WorkExperienceComponent implements OnInit {
+  isOpen = false;
   companiesDescription: CompanyCardModel[] = [
     {
       companyName: 'Ifs&Whiles Sp. z o.o',

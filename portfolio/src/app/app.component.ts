@@ -1,5 +1,5 @@
-import { Component, ViewChild, ElementRef } from '@angular/core';
-
+import { Component, ViewChild, ElementRef, } from '@angular/core';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -13,6 +13,10 @@ export class AppComponent {
   public ctx!: CanvasRenderingContext2D | null;
 
   isCompanyDescriptionVisible: boolean = false;
+
+  constructor(private router: Router){
+
+  }
 
   ngAfterViewInit(): void {
     this.ctx = this.carrerGoals.nativeElement.getContext('2d');
@@ -28,5 +32,9 @@ export class AppComponent {
 
   toggleCompanyDescription(): void {
     this.isCompanyDescriptionVisible = !this.isCompanyDescriptionVisible;
+  }
+
+  goToTest(){
+    this.router.navigate(['/test'])
   }
 }
