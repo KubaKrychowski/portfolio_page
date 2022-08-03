@@ -6,18 +6,22 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialsModule } from './materials/materials.module';
 import { LanguagesComponent } from './languages/languages.component';
 import { WorkExperienceComponent } from './work-experience/work-experience.component';
+import { ProjectsGalleryComponent } from './projects-gallery/projects-gallery.component';
+import { SwiperModule } from 'swiper/angular';
 
 @NgModule({
   declarations: [
     AppComponent,
     LanguagesComponent,
     WorkExperienceComponent,
+    ProjectsGalleryComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MaterialsModule,
+    SwiperModule
   ],
   providers: [],
   bootstrap: [AppComponent]
