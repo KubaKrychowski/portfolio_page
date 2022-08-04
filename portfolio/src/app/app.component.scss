@@ -19,6 +19,7 @@
     padding: 1% 5%;
     margin-top: 10%;
     height: 50%;
+    width: 90%;
     background-image: linear-gradient(
       to right,
       rgba(30, 29, 34, 0.171),
@@ -30,7 +31,7 @@
     justify-content: space-between;
 
     .text {
-      width: 50%;
+      width: 45%;
       .name {
         font-size: 30px;
       }
@@ -44,9 +45,16 @@
       }
     }
 
-    .photo {
-      height: 100%;
+    .photo-container {
+      width: 45%;
+      height: 98%;
+
+      .photo{
+        height: 100%;
+        width: auto;
+      }
     }
+
   }
 
   .page-section {
@@ -78,59 +86,14 @@
   justify-items: center;
 }
 
-.project-card-container {
-  padding: 1%;
-  width: 25%;
-  height: 45vh;
-  background-color: rgb(44, 26, 44);
-  border-radius: 8px;
-  -webkit-box-shadow: 2px 10px 24px 0px rgba(95, 16, 176, 1);
-  -moz-box-shadow: 2px 10px 24px 0px rgba(95, 16, 176, 1);
-  box-shadow: 2px 10px 24px 0px rgb(40, 32, 48);
+.projects-section{
+  align-items: center;
+  justify-content: center;
+  column-gap: 30%;
 
-  &:hover {
-    background-image: linear-gradient(
-      to bottom,
-      rgb(44, 26, 44),
-      rgb(128, 76, 128)
-    );
-    background-color: rgb(128, 76, 128);
-    -webkit-box-shadow: 2px 25px 24px 0px rgba(186, 133, 237, 1);
-    -moz-box-shadow: 2px 25px 24px 0px rgba(186, 133, 237, 1);
-    box-shadow: 2px 25px 24px 0px rgba(186, 133, 237, 1);
-  }
-
-  .project-card-content {
-    height: 100%;
-    width: 100%;
-
-    .project-photo {
-      width: 98%;
-      max-height: 140px;
-    }
-
-    .project-name {
-      text-align: left;
-    }
-
-    .status {
-      border-radius: 10px;
-      padding: 5px 10px;
-      background-color: rgb(204, 173, 86);
-
-      &-canceled {
-        background-color: rgb(133, 13, 13);
-      }
-    }
-
-    .stack {
-      position: absolute;
-      bottom: 0;
-      .tech-thumb {
-        height: 2em;
-        width: auto;
-      }
-    }
+  .projects-header{
+    font-size: 48px !important;
+    font-family: 'Montserrat', sans-serif !important;
   }
 }
 
@@ -181,5 +144,5 @@
 }
 
 .projects-gallery{
-  
+
 }

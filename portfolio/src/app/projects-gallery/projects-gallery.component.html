@@ -1,14 +1,50 @@
 <swiper [config]="swiperConfig" class="swiper" class="mySwiper">
-  <ng-template class="swiper-slide" swiperSlide>
+  <ng-template
+    *ngFor="let project of projects"
+    class="swiper-slide"
+    swiperSlide
+  >
     <div (click)="logSlide()" class="custom-slide col">
-      <h1>
-        Marketing simulator
-      </h1>
+      <img
+        *ngIf="project.photoSrc"
+        class="project-logo"
+        src="{{ project.photoSrc }}"
+        alt=""
+      />
+
+      <div class="project-header row">
+        <div>{{ project.title }}</div>
+        <div class="status status-{{ project.status.type }}">
+          {{ project.status.title }}
+        </div>
+      </div>
+      <hr class="hr" />
+
+      <div class="project-description">
+        {{ project.description }}
+      </div>
+
+      <div class="stack row">
+        <div class="col">
+          <div>Stack:</div>
+          <div class="row mt-1">
+            <div *ngFor="let technologyThumbUrl of project.stackThumbs">
+              <img class="stack-thumb" src="{{ technologyThumbUrl }}" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="git-link">
+        <a href="{{project.githubLink}}">
+          <img
+          class="git-icon"
+          src="../../assets/github-icon.png"
+          alt=""
+        />
+        </a>
+
+      </div>
     </div>
   </ng-template>
-
-  <ng-template class="swiper-slide" swiperSlide>Slide 3</ng-template
-  ><ng-template class="swiper-slide" swiperSlide>Slide 4</ng-template
-  ><ng-template class="swiper-slide" swiperSlide>Slide 5</ng-template
-  ><ng-template class="swiper-slide" swiperSlide>Slide 6</ng-template>
 </swiper>

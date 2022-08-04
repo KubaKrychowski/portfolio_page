@@ -10,62 +10,87 @@
   display: flex;
   border-radius: 18px;
   font-size: 22px;
-  font-weight: bold;
   color: rgb(95, 29, 29);
-  padding: 1em;
 }
 
 .custom-slide {
   height: 100%;
   width: 100%;
   color: white;
-  background-image: linear-gradient(
-    to bottom,
-    rgb(44, 26, 44),
-    rgb(128, 76, 128)
-  );
+  border-radius: 13px;
+  padding: 1em;
+  position: relative;
+  background-color:  rgb(44, 26, 44);
 
   &:hover {
     cursor: pointer;
-    background-color: rgb(128, 76, 128);
+    background-image: linear-gradient(
+      to bottom,
+      rgb(44, 26, 44),
+      rgb(128, 76, 128)
+    );
     -webkit-box-shadow: 2px 25px 24px 0px rgba(186, 133, 237, 1);
     -moz-box-shadow: 2px 25px 24px 0px rgba(186, 133, 237, 1);
     box-shadow: 2px 25px 24px 0px rgba(186, 133, 237, 1);
   }
-}
 
-.swiper-slide:nth-child(2n) {
-  background-color: rgb(0, 140, 255);
-}
+  .project-logo {
+    max-height: 40%;
+    width: 40%;
+  }
 
-.swiper-slide:nth-child(3n) {
-  background-color: rgb(10, 184, 111);
-}
+  .project-header {
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 1em;
 
-.swiper-slide:nth-child(4n) {
-  background-color: rgb(211, 122, 7);
-}
+    .status {
+      border-radius: 10px;
+      padding: 5px 10px;
+      background-color: rgb(204, 173, 86);
+      font-size: 12px;
+      /**
+      ProjectStatusTypeEnum
+      */
+      &-1 {
+        background-color: rgb(204, 173, 86);
+      }
 
-.swiper-slide:nth-child(5n) {
-  background-color: rgb(118, 163, 12);
-}
+      &-2 {
+        background-color: #850d0d;
+      }
 
-.swiper-slide:nth-child(6n) {
-  background-color: rgb(180, 10, 47);
-}
+      &-3 {
+        background-color: rgb(34, 34, 154);
+      }
+    }
+  }
 
-.swiper-slide:nth-child(7n) {
-  background-color: rgb(35, 99, 19);
-}
+  .hr{
+    width: 100%;
+  }
 
-.swiper-slide:nth-child(8n) {
-  background-color: rgb(0, 68, 255);
-}
+  .project-description {
+    font-size: 13px;
+  }
 
-.swiper-slide:nth-child(9n) {
-  background-color: rgb(218, 12, 218);
-}
+  .stack{
+    position: absolute;
+    bottom: 10%;
 
-.swiper-slide:nth-child(10n) {
-  background-color: rgb(54, 94, 77);
+    &-thumb {
+      height: 2em;
+      width: auto;
+    }
+  }
+
+  .git-link{
+    position: absolute;
+    bottom: 10%;
+    right: 1em;
+
+    .git-icon{
+      width: 52px;
+    }
+  }
 }

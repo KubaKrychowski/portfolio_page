@@ -20,7 +20,7 @@
         personal projects and long term, to become a full-stack developer.
       </p>
     </div>
-    <div class="photo">
+    <div class="photo-container">
       <img class="photo" src="../assets/face.jpg" />
     </div>
   </header>
@@ -77,166 +77,27 @@
     <mat-progress-bar mode="determinate" value="60"></mat-progress-bar>
   </article>
 
-  <article class="page-section">
-    <h1 class="section-header">My projects:</h1>
-    <div class="row">
-      <a> </a>
-      <div class="project-card-container">
-        <div class="project-card-content relative">
-          <img class="project-photo" src="../assets/marketing-simulator.png" />
-          <div class="row">
-            <h3 class="project-name"><b>Marketing Simulator</b></h3>
-
-            <div class="ml-a status">In build</div>
-          </div>
-          <hr />
-          <p class="project-short-description">
-            It's a web application aimed at demonstration of free-market rules.
-            Every user starts with a small company whose goal is to climb global
-            rankings.
-          </p>
-
-          <a
-            target="_blank"
-            href="https://github.com/KubaKrychowski/marketing-simulator-v3.1"
-          >
-            <img
-              matTooltip="check repository"
-              class="github-link"
-              src="../assets/github-icon.png"
-            />
-          </a>
-
-          <div class="stack ml-a">
-            <h5>Stack:</h5>
-
-            <div class="row col-gap-1">
-              <img
-                class="tech-thumb"
-                matTooltip="Angular Framework"
-                src="../assets/angular-logo.png"
-              />
-              <img
-                class="tech-thumb"
-                matTooltip="Angular Materials"
-                src="../assets/angular-materials-logo.png"
-              />
-              <img
-                class="tech-thumb"
-                matTooltip="ASP .NET"
-                src="../assets/dot-net-logo.png"
-              />
-              <img
-                class="tech-thumb"
-                matTooltip="google cloud platform: google maps and geolocalization"
-                src="../assets/gcs-logo.png"
-              />
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="project-card-container">
-        <div class="project-card-content relative">
-          <img class="project-photo" src="../assets/company-management.png" />
-          <div class="row">
-            <h3 class="project-name"><b>Company Management</b></h3>
-
-            <div class="ml-a status status-canceled">Canceled</div>
-          </div>
-          <hr />
-          <p class="project-short-description">
-            Web application letting small companies owners better manage
-          </p>
-
-          <a
-            target="_blank"
-            href="https://github.com/KubaKrychowski/company-management-v2"
-          >
-            <img
-              matTooltip="check repository"
-              class="github-link"
-              src="../assets/github-icon.png"
-            />
-          </a>
-
-          <div class="stack ml-a">
-            <h5>Stack:</h5>
-
-            <div class="row col-gap-1">
-              <img class="tech-thumb" src="../assets/angular-logo.png" />
-              <img class="tech-thumb" src="../assets/bootstrap-logo.png" />
-              <img
-                class="tech-thumb"
-                src="../assets/google-firebase-logo.png"
-              />
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="project-card-container">
-        <div class="project-card-content relative">
-          <img
-            style="width: auto !important"
-            class="project-photo"
-            src="../assets/admin-cloud-logo.png"
-          />
-          <div class="row">
-            <h3 class="project-name"><b>Admin Cloud</b></h3>
-
-            <div class="ml-a status status-canceled">In planning</div>
-          </div>
-          <hr />
-          <p class="project-short-description">
-            Web application letting small companies owners better manage theirs
-            employees work
-          </p>
-
-          <a
-            target="_blank"
-            href="https://github.com/KubaKrychowski/company-management-v2"
-          >
-            <img
-              matTooltip="check repository"
-              class="github-link"
-              src="../assets/github-icon.png"
-            />
-          </a>
-
-          <div class="stack ml-a">
-            <h5>Stack:</h5>
-
-            <div class="row col-gap-1">
-              <img class="tech-thumb" src="../assets/angular-logo.png" />
-              <img class="tech-thumb" src="../assets/dot-net-logo.png" />
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </article>
-
-  <article class="page-section">
+  <article class="page-section projects-section row">
+    <h1 class="section-header projects-header">My projects:</h1>
     <div class="projects-gallery">
       <app-projects-gallery></app-projects-gallery>
     </div>
   </article>
-</section>
 
-<section class="contact">
-  <article class="contact-thumbs">
-    <a
-      href="https://www.linkedin.com/in/kuba-krychowski-2a0743237/"
-      target="_blank"
-    >
-      <img class="contact-thumb" src="../assets/linkedIn-logo.png" />
-    </a>
+  <section class="contact">
+    <article class="contact-thumbs">
+      <a
+        href="https://www.linkedin.com/in/kuba-krychowski-2a0743237/"
+        target="_blank"
+      >
+        <img class="contact-thumb" src="../assets/linkedIn-logo.png" />
+      </a>
 
-    <img class="contact-thumb" src="../assets/call-logo.png" />
+      <img class="contact-thumb" src="../assets/call-logo.png" />
 
-    <a href="mailto: kkrychowski@interia.pl">
-      <img class="contact-thumb" src="../assets/mail-logo.png" />
-    </a>
-  </article>
+      <a href="mailto: kkrychowski@interia.pl">
+        <img class="contact-thumb" src="../assets/mail-logo.png" />
+      </a>
+    </article>
+  </section>
 </section>
