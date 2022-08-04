@@ -1,13 +1,28 @@
 .cards-container {
+  width: 100%;
   margin-top: 2em;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
 }
 
+.languages{
+  width: 30%;
+}
+
+.frameworks{
+  margin-left: 5%;
+  width: 30%;
+  margin-right: 5%;
+}
+
+.utilites {
+  width: 30%;
+}
+
 .card {
   display: flex;
-  width: 80%;
+  width: 100%;
   height: 8em;
   margin-top: 3em;
   margin-left: 5%;
