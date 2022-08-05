@@ -33,6 +33,10 @@ new Swiper('.my-swiper', {
   encapsulation: ViewEncapsulation.None,
 })
 export class ProjectsGalleryComponent implements OnInit {
+  public get isMobile(): boolean{
+    return window.innerWidth <= 786;
+  }
+  
   projects: Array<ProjectModel> = [
     {
       title: 'Marketing Simulator',

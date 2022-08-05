@@ -1,6 +1,5 @@
 .app-container {
-  height: 90vh;
-
+  height: 100%;
   .main-header {
     margin-top: 2%;
 
@@ -46,12 +45,14 @@
     }
 
     .photo-container {
+      display: flex;
+      align-items: center;
       width: 45%;
       height: 98%;
 
       .photo{
-        height: 100%;
-        width: auto;
+        width: 100%;
+        height: auto;
       }
     }
 
@@ -85,16 +86,23 @@
   margin-bottom: 1em;
   align-items: center;
   justify-items: center;
+
+  .milestone-description {
+    text-align: center;
+  }
 }
 
 .projects-section{
   align-items: center;
-  justify-content: center;
-  column-gap: 30%;
-
   .projects-header{
     font-size: 48px !important;
     font-family: 'Montserrat', sans-serif !important;
+    line-height: 50px;
+    width: 20%;
+  }
+
+  .projects-gallery{
+    width: 50%;
   }
 }
 
@@ -102,6 +110,7 @@
   position: fixed;
   right: 1em;
   bottom: 0;
+  z-index: 3;
 
   .contact-thumbs {
     display: flex;
@@ -143,3 +152,41 @@
     list-style: none;
   }
 }
+
+.gallery-container {
+  width: 100%;
+  justify-content: center;
+  column-gap: 30%;
+}
+
+.mobile-gallery-container {
+  width: 100%;
+  align-items: center;
+
+  .mobile-projects-header{
+    width: 100%;
+    text-align: center;
+  }
+
+  .mobile-projects-gallery{
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 786px) {
+  .app-header{
+    width: 100%;
+
+  .text{
+    width: 100% !important;
+  }
+  }
+
+  .carrer-goals {
+    font-size: 11px;
+    .milestone-description {
+      word-break: break-all;
+    }
+  }
+}
+

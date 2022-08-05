@@ -1,4 +1,4 @@
-<section class="app-container">
+<main class="app-container">
   <header class="main-header">
     <h1 class="name">
       <i>Kuba Krychowski</i>
@@ -20,7 +20,7 @@
         personal projects and long term, to become a full-stack developer.
       </p>
     </div>
-    <div class="photo-container">
+    <div *ngIf="!isMobile" class="photo-container">
       <img class="photo" src="../assets/face.jpg" />
     </div>
   </header>
@@ -37,11 +37,11 @@
     <app-work-experience></app-work-experience>
   </article>
 
-  <article class="page-section">
+  <article class="page-section carrer-goals">
     <h1 class="section-header">My carrer goals</h1>
     <div class="row">
       <div class="col milestone">
-        <p style="text-align: center">Learn basics of JavaScript,CSS,HTML</p>
+        <p class="milestone-description" style="text-align: center">Learn basics of JavaScript,CSS,HTML</p>
         <div class="circle"></div>
       </div>
 
@@ -77,11 +77,30 @@
     <mat-progress-bar mode="determinate" value="60"></mat-progress-bar>
   </article>
 
-  <article class="page-section projects-section row">
-    <h1 class="section-header projects-header">My projects:</h1>
-    <div class="projects-gallery">
-      <app-projects-gallery></app-projects-gallery>
-    </div>
+  <article class="page-section projects-section">
+    <ng-container *ngIf="!isMobile else mobileGallery" >
+      <div class="row gallery-container">
+        <h1 class="section-header projects-header">My projects:</h1>
+        <div class="projects-gallery">
+          <app-projects-gallery></app-projects-gallery>
+        </div>
+      </div>
+    </ng-container>
+
+    <ng-template #mobileGallery>
+      <div class="col mobile-gallery-container">
+        <h1 class="mobile-projects-header">My projects:</h1>
+        <div class="mobile-projects-gallery">
+          <app-projects-gallery></app-projects-gallery>
+        </div>
+      </div>
+    </ng-template>
+  </article>
+
+  <article class="page-section">
+    <h1 class="section-header">
+      Courses and books i learn from :
+    </h1>
   </article>
 
   <section class="contact">
@@ -100,4 +119,4 @@
       </a>
     </article>
   </section>
-</section>
+</main>

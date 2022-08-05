@@ -8,6 +8,10 @@ import { LanguageCardModel } from '../shared/models/language-card.model';
   styleUrls: ['./languages.component.scss']
 })
 export class LanguagesComponent implements OnInit {
+  public get isMobile(): boolean{
+    return window.innerWidth <= 786;
+  }
+  
   cards: LanguageCardModel[] = [
     {
       type: LanguageCardTypeEnum.LANGUAGE,

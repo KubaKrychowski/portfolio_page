@@ -6,27 +6,23 @@
   flex-wrap: wrap;
 }
 
-.languages{
+.languages,
+.utilities {
   width: 30%;
 }
 
-.frameworks{
+.frameworks {
   margin-left: 5%;
   width: 30%;
   margin-right: 5%;
 }
 
-.utilites {
-  width: 30%;
-}
-
 .card {
   display: flex;
-  width: 100%;
+  width: 90%;
   height: 8em;
   margin-top: 3em;
-  margin-left: 5%;
-  padding: 1em;
+  padding: 5%;
   background-color: rgb(30, 26, 46);
   border-radius: 25px;
   -webkit-box-shadow: 1px 1px 20px -5px rgba(255, 255, 255, 1);
@@ -43,4 +39,15 @@
   // }
 }
 
+@media screen and (max-width: 786px) {
+  .languages,
+  .utilities,
+  .frameworks {
+    width: 100% !important;
+    margin: 0 !important;
+  }
+}
 
+.list-header{
+  margin-top: 5%;
+}

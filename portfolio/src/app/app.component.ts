@@ -6,27 +6,15 @@ import { Router } from '@angular/router';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  title = 'portfolio';
-
   @ViewChild('carrerGoals', {static: false}) carrerGoals!: ElementRef<HTMLCanvasElement>;
 
-  public ctx!: CanvasRenderingContext2D | null;
+  public isCompanyDescriptionVisible: boolean = false;
 
-  isCompanyDescriptionVisible: boolean = false;
-
-  constructor(private router: Router){
-
+  public get isMobile(): boolean{
+    return window.innerWidth <= 786;
   }
 
-  ngAfterViewInit(): void {
-    this.ctx = this.carrerGoals.nativeElement.getContext('2d');
-    if(this.ctx){
-      this.ctx.beginPath();
-      this.ctx.lineTo(100,10);
-      this.ctx.stroke();
-    } else {
-      console.log('ctx is not defined');
-    }
+  constructor(private router: Router){
 
   }
 

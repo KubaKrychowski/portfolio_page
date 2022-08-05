@@ -1,7 +1,67 @@
 <div class="cards-container">
-  <div class="row align-items-start">
+  <ng-container *ngIf="!isMobile else mobileCards">
+    <div  class="row align-items-start">
+      <div class="languages ">
+        <h2>Languages:</h2>
+
+        <div class="languages-container">
+          <div *ngFor="let card of cards">
+            <div *ngIf="card.type === 1" class="card slide-fwd-center">
+              <div class="row">
+                <img class="card-thumb" src="../assets/{{ card.thumbName }}" />
+                <div class="col">
+                  <h3>{{ card.Title }}</h3>
+                  <h5 *ngIf="card.Version">versions: {{ card.Version }}</h5>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="frameworks">
+        <h2>Frameworks:</h2>
+
+        <div class="frameworks-container">
+          <div *ngFor="let card of cards">
+            <div *ngIf="card.type === 2" class="card">
+              <div class="row">
+                <img class="card-thumb" src="../assets/{{ card.thumbName }}" />
+                <div class="col">
+                  <h3>{{ card.Title }}</h3>
+                  <h5 *ngIf="card.Version">versions: {{ card.Version }}</h5>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="utilities">
+        <h2>Utilites:</h2>
+
+        <div class="utilites-container">
+          <div *ngFor="let card of cards">
+            <div *ngIf="card.type === 3" class="card slide-fwd-center">
+              <div class="row">
+                <img class="card-thumb" src="../assets/{{ card.thumbName }}" />
+                <div class="col">
+                  <h3>{{ card.Title }}</h3>
+                  <h5 *ngIf="card.Version">versions: {{ card.Version }}</h5>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </ng-container>
+</div>
+
+<ng-template #mobileCards>
+  <div  class="col align-items-start">
     <div class="languages">
-      <h2>Languages:</h2>
+      <h2 class="list-header">Languages:</h2>
 
       <div class="languages-container">
         <div *ngFor="let card of cards">
@@ -19,7 +79,7 @@
     </div>
 
     <div class="frameworks">
-      <h2>Frameworks:</h2>
+      <h2 class="list-header">Frameworks:</h2>
 
       <div class="frameworks-container">
         <div *ngFor="let card of cards">
@@ -36,8 +96,8 @@
       </div>
     </div>
 
-    <div class="utilites">
-      <h2>Utilites:</h2>
+    <div class="utilities">
+      <h2 class="list-header">Utilites:</h2>
 
       <div class="utilites-container">
         <div *ngFor="let card of cards">
@@ -54,4 +114,4 @@
       </div>
     </div>
   </div>
-</div>
+</ng-template>
