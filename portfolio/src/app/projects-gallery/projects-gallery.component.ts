@@ -87,7 +87,10 @@ export class ProjectsGalleryComponent implements OnInit {
 
   swiperConfig: SwiperOptions = {
     effect: 'cards',
-    navigation: false,
+    navigation: {
+      enabled: true,
+      hideOnClick: true,
+    },
     loop: true
   };
   constructor() {}
