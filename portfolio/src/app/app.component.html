@@ -38,10 +38,12 @@
   </article>
 
   <article class="page-section carrer-goals">
-    <h1 class="section-header">My carrer goals</h1>
+    <h1 class="section-header">My carrer goals:</h1>
     <div class="row">
       <div class="col milestone">
-        <p class="milestone-description" style="text-align: center">Learn basics of JavaScript,CSS,HTML</p>
+        <p class="milestone-description" style="text-align: center">
+          Learn basics of JavaScript,CSS,HTML
+        </p>
         <div class="circle"></div>
       </div>
 
@@ -78,7 +80,7 @@
   </article>
 
   <article class="page-section projects-section">
-    <ng-container *ngIf="!isMobile else mobileGallery" >
+    <ng-container *ngIf="!isMobile; else mobileGallery">
       <div class="row gallery-container">
         <h1 class="section-header projects-header">My projects:</h1>
         <div class="projects-gallery">
@@ -98,9 +100,91 @@
   </article>
 
   <article class="page-section">
-    <h1 class="section-header">
-      Courses and books i learn from :
-    </h1>
+    <h1 class="section-header">Courses and books i learn from :</h1>
+
+    <h2 class="section-sub-header">Books:</h2>
+    <div class="books row">
+      <div class="book-card col">
+        <div class="book-img">
+          <img src="../assets/angular-up-and-running.jpg" alt="" />
+        </div>
+
+        <div class="title col">
+          <div class="name">Angular Up & Running</div>
+
+          <div class="author">Shyam Seshadri</div>
+        </div>
+      </div>
+
+      <div class="book-card col">
+        <div class="book-img">
+          <img src="../assets/html-css-book.jpg" alt="" />
+        </div>
+
+        <div class="title col">
+          <div class="name">
+            HTML and CSS:
+
+            <br />
+
+            desing and build webisites
+          </div>
+
+          <div class="author">Jon Duckett</div>
+        </div>
+      </div>
+    </div>
+
+    <h2 class="section-sub-header">Courses:</h2>
+    <div class="courses row">
+      <div class="course-card">
+        <img class="course-img" src="../assets/dot-net-course-img.jpg" />
+
+        <div class="course-title">
+          <h1>
+            Complete guide to ASP.NET
+            <br />
+            Core MVC (.NET 6)
+          </h1>
+
+          <h2>Bhrugen Patel</h2>
+        </div>
+
+        <div class="button-container">
+          <a
+            target="_blank"
+            href="https://www.udemy.com/course/complete-aspnet-core-21-course/"
+            class="course-button"
+          >
+            More informations
+          </a>
+        </div>
+      </div>
+
+      <div class="course-card">
+        <img class="course-img" src="../assets/angular-course-img.jpg" />
+
+        <div class="course-title">
+          <h1>
+            Angular - The Complete
+            <br />
+            Guide (2022 Edition)
+          </h1>
+
+          <h2>Maximilian Schwarzmüller</h2>
+        </div>
+
+        <div class="button-container">
+          <a
+            target="_blank"
+            href="https://www.udemy.com/course/the-complete-guide-to-angular-2/"
+            class="course-button"
+          >
+            More informations
+          </a>
+        </div>
+      </div>
+    </div>
   </article>
 
   <section class="contact">
